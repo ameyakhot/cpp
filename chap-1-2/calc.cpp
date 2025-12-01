@@ -1,30 +1,18 @@
 #include <iostream>
+#include <string>
+#include "operations.h"
 
-float add(float x, float y){
-    return x + y;
-}
-
-float subtract(float x, float y){
-    return x - y;
-}
-
-float multiply(float x, float y){
-    return x * y;
-}
-
-float divide(float x, float y){
-    return x / y;
-}
+using namespace std;
 
 int main(){
-    std::cout << "Welcome to the calculator!";
-    std::cout << "Enter two numbers: ";
+    cout << "Welcome to the calculator!\n";
+    cout << "Enter two numbers: \n";
     float num1, num2;
-    std::cin >> num1 >> num2;
+    cin >> num1 >> num2;
 
-    std::cout << "What would you like to do? (add, subtract, multiply, divide): ";
-    std::string operation;
-    std::cin >> operation;
+    cout << "What would you like to do? (add, subtract, multiply, divide): ";
+    string operation;
+    cin >> operation;
 
     float result;
     if (operation == "add") {
@@ -36,10 +24,10 @@ int main(){
     } else if (operation == "divide") {
         result = divide(num1, num2);
     } else {
-        std::cout << "Unknown operation." << std::endl;
+        cout << "Unknown operation." << endl;
         return 1;
     }
 
-    std::cout << "Result: " << result << std::endl;
+    cout << "Result: " << result << endl;
     return 0;
 }
